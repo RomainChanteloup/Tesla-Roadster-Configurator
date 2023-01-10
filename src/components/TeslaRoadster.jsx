@@ -16,13 +16,18 @@ const TeslaRoadster = (props) => {
 
   //A Metalic Material RED 
   const materialRED = new THREE.MeshPhysicalMaterial({
-    color: 0xe20017,
+    color: props.carColor.hex,
     metalness: 0.985,
     roughness: 0.25,
   })
 
+  function updateColor(color) {
+    console.log('updateColor', color)
+    materialRED.color.set(color.hex)
+  }
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[0,0,0]}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.01}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-83.8, 31.33, 153.42]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
