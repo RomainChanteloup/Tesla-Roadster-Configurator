@@ -1,16 +1,18 @@
 import { PresentationControls, Stage } from "@react-three/drei";
 import { MeshReflectorMaterial } from "@react-three/drei";
+import { Suspense } from "react";
+import TeslaRoadster from "./Scene";
 
 const Experience = () => {
+
     return (
         <PresentationControls speed={1.5} global zoom={0.7} polar={[-0.1, Math.PI / 4]}>
-          <Stage environment={"city"} intensity={0.6} shadows={false}>
-            <mesh>
-                <boxGeometry />
-                <meshNormalMaterial />
-            </mesh>
+          <Stage environment={"city"} intensity={0.6} shadows={false} adjustCamera={1}>
+            <Suspense fallback={null}>
+                <TeslaRoadster />
+            </Suspense>
             </Stage>
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.58, 0]}>
                 <planeGeometry args={[170, 170]} />
                 <MeshReflectorMaterial
                 blur={[300, 100]}
