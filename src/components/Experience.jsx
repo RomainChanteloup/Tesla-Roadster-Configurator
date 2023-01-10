@@ -12,7 +12,7 @@ const Experience = () => {
                 <TeslaRoadster />
             </Suspense>
             </Stage>
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.58, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]}>
                 <planeGeometry args={[170, 170]} />
                 <MeshReflectorMaterial
                 blur={[300, 100]}

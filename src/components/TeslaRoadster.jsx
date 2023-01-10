@@ -9,9 +9,18 @@ Title: Tesla Roadster 2020
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import * as THREE from 'three'
 
 const TeslaRoadster = (props) => {
   const { nodes, materials } = useGLTF('./models/tesla_roadster_2020/scene.gltf')
+
+  //A Metalic Material RED 
+  const materialRED = new THREE.MeshPhysicalMaterial({
+    color: 0xe20017,
+    metalness: 0.985,
+    roughness: 0.25,
+  })
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.01}>
@@ -29,7 +38,7 @@ const TeslaRoadster = (props) => {
           <group position={[0, 54.14, -2.14]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
             <group position={[0, -0.68, 0.41]}>
               <mesh geometry={nodes.roadster007_Glass_mid_tint_0.geometry} material={materials.Glass_mid_tint} />
-              <mesh geometry={nodes.roadster082_car_main_paint_0.geometry} material={materials.car_main_paint} position={[0, 0.68, -0.41]} />
+              <mesh geometry={nodes.roadster082_car_main_paint_0.geometry} material={materialRED} position={[0, 0.68, -0.41]} />
             </group>
             <group position={[0, 1.15, 0.37]}>
               <mesh geometry={nodes.roadster022_grill_0.geometry} material={materials.grill} />
@@ -57,7 +66,7 @@ const TeslaRoadster = (props) => {
               <mesh geometry={nodes.roadster052_indicator_left_0.geometry} material={materials.indicator_left} />
               <mesh geometry={nodes.roadster052_indicator_right_0.geometry} material={materials.indicator_right} />
             </group>
-            <mesh geometry={nodes['TRDEF-Body_car_main_paint_0'].geometry} material={materials.car_main_paint} />
+            <mesh geometry={nodes['TRDEF-Body_car_main_paint_0'].geometry} material={materialRED} />
             <mesh geometry={nodes.roadster005_grill_0.geometry} material={materials.grill} position={[0, -2.22, -0.36]} />
             <mesh geometry={nodes.roadster008_interior_0.geometry} material={materials.interior} position={[0, -0.05, 0.22]} />
             <mesh geometry={nodes.roadster009_seats_0.geometry} material={materials.seats} position={[0, 0.1, -0.06]} />
@@ -66,7 +75,7 @@ const TeslaRoadster = (props) => {
             <mesh geometry={nodes['roadster012_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, -0.2, 0.5]} />
             <mesh geometry={nodes['roadster013_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, 1.17, 0.37]} />
             <mesh geometry={nodes['roadster014_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0.35, -0.46, 0.11]} />
-            <mesh geometry={nodes.roadster015_car_main_paint_0.geometry} material={materials.car_main_paint} position={[0, -0.47, -0.02]} />
+            <mesh geometry={nodes.roadster015_car_main_paint_0.geometry} material={materialRED} position={[0, -0.47, -0.02]} />
             <mesh geometry={nodes['roadster016_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, 0.77, 0.38]} />
             <mesh geometry={nodes['roadster017_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, 0.33, 0.4]} />
             <mesh geometry={nodes.roadster018_non_lustrous_metal_0.geometry} material={materials.non_lustrous_metal} position={[0, -0.68, 0.28]} />
@@ -85,7 +94,7 @@ const TeslaRoadster = (props) => {
             <mesh geometry={nodes.roadster036_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, -2, -0.04]} />
             <mesh geometry={nodes.roadster037_Glass_Clear_0.geometry} material={materials.Glass_Clear} position={[0, -2.03, -0.04]} />
             <mesh geometry={nodes.roadster038_chrome_0.geometry} material={materials.chrome} position={[0, -2.21, -0.05]} />
-            <mesh geometry={nodes.roadster039_chrome_0.geometry} material={materials.chrome} position={[0, 2.1, 0.23]} />
+            <mesh geometry={nodes.roadster039_chrome_0.geometry} material={materials.chrome} position={[0, 2.102, 0.23]} />
             <mesh geometry={nodes.roadster040_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, -2.19, -0.36]} />
             <mesh geometry={nodes['roadster041_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, -2.16, -0.31]} />
             <mesh geometry={nodes.roadster042_mirror_0.geometry} material={materials.mirror} />
@@ -102,11 +111,11 @@ const TeslaRoadster = (props) => {
             <mesh geometry={nodes['roadster055_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, 1.13, 0.47]} />
             <mesh geometry={nodes.roadster056_Glass_Tint_max_0.geometry} material={materials.Glass_Tint_max} position={[0, 0.14, 0.59]} />
             <mesh geometry={nodes.roadster057_Glass_Tint_max_0.geometry} material={materials.Glass_Tint_max} position={[0, 0.11, 0.56]} />
-            <mesh geometry={nodes.roadster058_car_main_paint_0.geometry} material={materials.car_main_paint} position={[0, 0.1, 0.55]} />
+            <mesh geometry={nodes.roadster058_car_main_paint_0.geometry} material={materialRED} position={[0, 0.1, 0.55]} />
             <mesh geometry={nodes.roadster059_Glass_mid_tint_0.geometry} material={materials.Glass_mid_tint} position={[0, -0.18, 0.35]} />
-            <mesh geometry={nodes.roadster060_car_main_paint_0.geometry} material={materials.car_main_paint} position={[0, 2.05, 0.28]} />
+            <mesh geometry={nodes.roadster060_car_main_paint_0.geometry} material={materialRED} position={[0, 2.05, 0.28]} />
             <mesh geometry={nodes.roadster061_ior_1_0.geometry} material={materials.ior_1} position={[0, 2.11, 0.27]} />
-            <mesh geometry={nodes.roadster062_car_main_paint_0.geometry} material={materials.car_main_paint} position={[0, 2.08, 0.27]} />
+            <mesh geometry={nodes.roadster062_car_main_paint_0.geometry} material={materialRED} position={[0, 2.08, 0.27]} />
             <mesh geometry={nodes.roadster063_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, 2.11, 0.27]} />
             <mesh geometry={nodes.roadster064_Glass_rear_lights_main_0.geometry} material={materials.Glass_rear_lights_main} position={[0, 2.11, 0.27]} />
             <mesh geometry={nodes.roadster065_Glass_rear_lights_DHO_0.geometry} material={materials.Glass_rear_lights_DHO} position={[0, 1.94, 0.21]} />
