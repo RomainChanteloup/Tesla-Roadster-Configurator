@@ -1,7 +1,7 @@
 import { PresentationControls, Stage } from "@react-three/drei";
 import { MeshReflectorMaterial } from "@react-three/drei";
 import { Suspense } from "react";
-import TeslaRoadster from "./Scene";
+import TeslaRoadster from "./TeslaRoadster";
 
 const Experience = () => {
 
