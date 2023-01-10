@@ -14,7 +14,7 @@ const Experience = (props) => {
                 <planeGeometry args={[170, 170]} />
                 <MeshReflectorMaterial
                 blur={[300, 100]}
-                resolution={2048}
+                resolution={1024}
                 mixBlur={1}
                 mixStrength={40}
                 roughness={1}
