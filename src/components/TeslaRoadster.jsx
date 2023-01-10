@@ -97,7 +97,7 @@ const TeslaRoadster = (props) => {
             <mesh geometry={nodes.roadster039_chrome_0.geometry} material={materials.chrome} position={[0, 2.102, 0.23]} />
             <mesh geometry={nodes.roadster040_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, -2.19, -0.36]} />
             <mesh geometry={nodes['roadster041_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, -2.16, -0.31]} />
-            <mesh geometry={nodes.roadster042_mirror_0.geometry} material={materials.mirror} />
+            {/* <mesh geometry={nodes.roadster042_mirror_0.geometry} material={materials.mirror} /> */}
             <mesh geometry={nodes.roadster043_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, 1.99, -0.27]} />
             <mesh geometry={nodes.roadster044_Glass_Clear_0.geometry} material={materials.Glass_Clear} position={[0, 2.11, -0.17]} />
             <mesh geometry={nodes['roadster045_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, 2.11, -0.17]} />
@@ -124,9 +124,9 @@ const TeslaRoadster = (props) => {
             <mesh geometry={nodes.roadster068_carbon_fibre_0.geometry} material={materials.carbon_fibre} position={[0, 1.91, 0.21]} />
             <mesh geometry={nodes.roadster069_Glass_rear_lights_main_0.geometry} material={materials.Glass_rear_lights_main} position={[0, 1.82, 0.23]} />
             <mesh geometry={nodes['roadster070_Metal_-_Black_rough_0'].geometry} material={materials['Metal_-_Black_rough']} position={[0, -0.09, -0.25]} />
-            <mesh geometry={nodes.roadster071_mirror_0.geometry} material={materials.mirror} />
+            {/* <mesh geometry={nodes.roadster071_mirror_0.geometry} material={materials.mirror} />
             <mesh geometry={nodes.roadster077_mirror_0.geometry} material={materials.mirror} />
-            <mesh geometry={nodes.roadster079_mirror_0.geometry} material={materials.mirror} />
+            <mesh geometry={nodes.roadster079_mirror_0.geometry} material={materials.mirror} /> */}
           </group>
           <group position={[83.8, 31.33, 153.42]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
             <group position={[-0.06, 0, 0]}>
